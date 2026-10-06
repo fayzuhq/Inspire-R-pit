@@ -9,3 +9,30 @@
 ✓ Running next.config.ts took 82ms
 
  GET / 200 in 3.0s (next.js: 2.7s, application-code: 255ms)
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead.
+
+  To migrate automatically, run:
+  npx @next/codemod@canary middleware-to-proxy .
+
+  Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+⨯ The file "./src/proxy.ts" must export a function, either as a default export or as a named "proxy" export.
+This function is what Next.js runs for every request handled by this proxy (previously called middleware).
+
+Why this happens:
+- You are migrating from `middleware` to `proxy`, but haven't updated the exported function.
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "proxy" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+✓ Compiled in 590ms
+✓ Compiled in 19ms
+  Reload env: .env.local
+✓ Compiled in 17ms
+✓ Compiled in 20ms
+ GET / 200 in 905ms (next.js: 204ms, proxy.ts: 292ms, application-code: 409ms)
+ GET /auth/login 307 in 1386ms (proxy.ts: 8ms)
+ GET /auth/login 200 in 50ms (next.js: 6ms, proxy.ts: 7ms, application-code: 37ms)
