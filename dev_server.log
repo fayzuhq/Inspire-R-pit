@@ -38,3 +38,4 @@ Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
  GET /auth/login 200 in 50ms (next.js: 6ms, proxy.ts: 7ms, application-code: 37ms)
  GET /auth/login 200 in 1061ms (next.js: 95ms, proxy.ts: 13ms, application-code: 953ms)
  GET /auth/login 200 in 116ms (next.js: 8ms, proxy.ts: 13ms, application-code: 95ms)
+ GET /auth/login 200 in 895ms (next.js: 353ms, proxy.ts: 10ms, application-code: 533ms)

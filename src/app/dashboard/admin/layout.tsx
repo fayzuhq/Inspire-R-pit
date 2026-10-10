@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { Heart, Home, Inbox, Calendar, Users, FileText, LogOut } from 'lucide-react';
+import { Heart, Home, Inbox, Calendar, Users, FileText, LogOut, Settings } from 'lucide-react';
 import { createClient } from '@/lib/supabase/client';
 
 export default function AdminDashboardLayout({
@@ -26,6 +26,7 @@ export default function AdminDashboardLayout({
     { name: 'Planning', href: '/dashboard/admin/planning', icon: Calendar },
     { name: 'Répertoire', href: '/dashboard/admin/beneficiaires', icon: Users },
     { name: 'Facturation', href: '/dashboard/admin/facturation', icon: FileText },
+    { name: 'Paramètres', href: '/dashboard/admin/settings', icon: Settings },
   ];
 
   return (
